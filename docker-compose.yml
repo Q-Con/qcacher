@@ -1,0 +1,19 @@
+version: '2'
+services:
+    nginx:
+        build: nginx
+        volumes:
+            - cache-data:/srv/cache
+        ports:
+            - 0.0.0.0:80:80
+    unbound:
+        build: unbound
+        ports:
+            - 0.0.0.0:53:53/udp
+    sniproxy:
+        build: sniproxy
+        ports:
+            - 0.0.0.0:443:443
+volumes:
+    cache-data:
+        driver: local

@@ -10,6 +10,8 @@ services:
         build: unbound
         ports:
             - 0.0.0.0:53:53/udp
+        environment:
+            DNS_IP: 192.168.86.183
     sniproxy:
         build: sniproxy
         ports:

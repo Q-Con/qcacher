@@ -1,0 +1,2 @@
+include qcacher/cache-installs-base;
+proxy_pass http://$host$request_uri;

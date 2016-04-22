@@ -1,0 +1,6 @@
+# Default Node
+include qcacher/cache-key-default;
+
+location / {
+	include qcacher/cache-installs;
+}

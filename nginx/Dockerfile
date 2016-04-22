@@ -3,7 +3,7 @@ MAINTAINER Dan Porter <dpreid@gmail.com>
 
 COPY conf /etc/nginx
 
-RUN nginx -t
+RUN mkdir -p /srv/cache/{installs,other,temp} && nginx -t
 
 EXPOSE 80
 

@@ -1,11 +1,10 @@
 # Proxy Cache
 include qcacher/proxy-base;
 
-# Only download one copy at a time and use a large timeout so
-# this really happens, otherwise we end up wasting bandwith
-# getting the file multiple times.
+# Only allow one download of a resource at a time
 proxy_cache_lock on;
-proxy_cache_lock_timeout 1h;
+proxy_cache_lock_age 4h;
+proxy_cache_lock_timeout 4h;
 
 # Allow the use of state entries
 proxy_cache_use_stale error timeout invalid_header updating http_500 http_502 http_503 http_504;

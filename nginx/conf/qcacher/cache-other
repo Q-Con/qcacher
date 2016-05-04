@@ -1,3 +1,0 @@
-proxy_cache other;
-include qcacher/proxy-cache;
-proxy_pass http://$host$request_uri;

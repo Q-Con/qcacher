@@ -1,7 +1,0 @@
-# Proxy Cache
-include includes/proxy-base;
-
-# Allow caching of 200 but not 301 or 302 as our cache key may not include query params
-# hence may not be valid for all users
-proxy_cache_valid 200 90d;
-proxy_cache_valid 301 302 0;

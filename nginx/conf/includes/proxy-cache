@@ -1,5 +1,5 @@
 # Proxy Cache
-include qcacher/proxy-base;
+include includes/proxy-base;
 
 # Only allow one download of a resource at a time
 proxy_cache_lock on;

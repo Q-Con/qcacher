@@ -3,7 +3,7 @@ services:
     nginx:
         build: nginx
         volumes:
-            - cache-data:/srv/cache
+            - cache-data:/srv
         ports:
             - 0.0.0.0:80:80
     unbound:

@@ -1,10 +1,13 @@
 FROM nginx:1.9-alpine
 MAINTAINER Dan Porter <dpreid@gmail.com>
 
-COPY conf /etc/nginx
+COPY config /etc/nginx
+COPY docker-entrypoint.sh /
 
-RUN mkdir -p /srv/cache/{installs,other,temp} && nginx -t
+RUN mkdir -p /srv && nginx -t
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD ["-g", "daemon off;"]

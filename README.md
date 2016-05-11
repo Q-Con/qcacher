@@ -1,10 +1,21 @@
-# qcacher - CDN cache and passthrough utility
+# qcacher - eSports & Gaming CDN cache service
 
 
 ## Introduction
 
-qcacher is a service designed for efficiently and correctly caching content
-from various providers.
+qcacher is a service designed for long-term caching of various content
+networks related to gaming. It is designed not only to maximize efficiency of
+fast connections with multiple clients, but also deliver long-term reliability
+and resiliency of caching when paired with slow, or intermittent connections.
+
+There are 3 components to this service:
+
+* **nginx** - a fast, lightweight, and efficient web server configured to
+  cache and store content from supported delivery networks
+* **unbound** - a flexible and fast DNS server configured to override records
+  of the services we support
+* **sniproxy** - proxies incoming HTTPS and TLS connections to overridden
+  domains to ensure successful connections to the upstream service
 
 
 ## Getting Started
@@ -15,16 +26,20 @@ To get started with this application you will require [docker][docker] and
 [docker-compose][docker-compose]. If you don't have these tools installed
 please see the section of [installing them](#installing-docker).
 
-Once you have these tools installed, it is a as simple as running `make run`
-in the root of the repository to start all the required services as separate
-docker containers, orchestrated by docker-compose.
+Further documentation and configurability is pending, but configure the
+`DNS_IP` in `docker-compose.yml` to that of your host, and have clients use
+the running machine as a DNS server.
+
+Once you have Docker installed and the IP configured, it is a as simple as
+running `docker-compose up` in the root of the repository to start all the
+required services.
 
 
 ## Appendices
 
 ### Installing Docker
 
-**NOTE:** The minimum required version of docker is 1.7.
+**NOTE:** You will need Docker Compose 1.6.0+ and Docker Engine 1.10.0+ as a minimum to run this project.
 
 #### Linux
 

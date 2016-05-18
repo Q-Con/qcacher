@@ -1,12 +1,36 @@
 # qcacher - eSports & Gaming CDN cache service
 
 
+* [Introduction](#introduction)
+* [Supported services](#supported-services)
+* [Components](#components)
+* [Getting Started](#getting-started)
+
+
 ## Introduction
 
 qcacher is a service designed for long-term caching of various content
 networks related to gaming. It is designed not only to maximize efficiency of
 fast connections with multiple clients, but also deliver long-term reliability
 and resiliency of caching when paired with slow, or intermittent connections.
+
+
+## Supported services
+
+We currently support content caching and delivery for the following services:
+
+* PlayStation Network (PS3 & PS4)
+* Xbox Live (**untested**)
+* Blizzard (Starcraft 2, Hearthstone, etc.)
+* Riot (League of Legends)
+* Steam (Broadcasts, Games, etc.)
+* Origin (EA)
+* Hi-Rez (Smite, etc.)
+* PlanetSide 2
+* Microsoft Windows updates
+
+
+## Components
 
 There are 3 components to this service:
 
@@ -19,6 +43,8 @@ There are 3 components to this service:
 
 
 ## Getting Started
+
+**NOTE:** This section is still incomplete. A simple tutorial will be available in the coming weeks.
 
 ### Running the application
 

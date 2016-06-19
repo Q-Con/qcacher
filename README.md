@@ -27,6 +27,7 @@ We currently support content caching and delivery for the following services:
 * Origin (EA)
 * Hi-Rez (Smite, etc.)
 * PlanetSide 2
+* Twitch.tv
 * Microsoft Windows updates
 
 

@@ -29,6 +29,8 @@ We currently support content caching and delivery for the following services:
 * PlanetSide 2
 * Twitch.tv
 * Microsoft Windows updates
+* NVIDIA driver updates
+* Mozilla Firefox
 
 
 ## Components

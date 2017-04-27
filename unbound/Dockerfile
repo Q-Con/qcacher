@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.5
 MAINTAINER Dan Porter <dpreid@gmail.com>
 
 RUN apk add --update unbound; \

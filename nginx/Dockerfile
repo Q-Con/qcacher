@@ -6,7 +6,7 @@ COPY docker-entrypoint.sh /
 
 RUN mkdir -p /srv && nginx -t
 
-EXPOSE 80
+EXPOSE 80 443
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 

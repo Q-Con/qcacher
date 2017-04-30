@@ -1,21 +1,21 @@
 version: '2'
 services:
     nginx:
-        image: qcacher/nginx
+        image: qcacher/nginx:debug
         build: nginx
         volumes:
             - cache-data:/srv
         ports:
             - 0.0.0.0:80:80
     unbound:
-        image: qcacher/unbound
+        image: qcacher/unbound:debug
         build: unbound
         ports:
             - 0.0.0.0:53:53/udp
         environment:
             DNS_IP: 192.168.86.183
     sniproxy:
-        image: qcacher/sniproxy
+        image: qcacher/sniproxy:debug
         build: sniproxy
         ports:
             - 0.0.0.0:443:443

@@ -86,7 +86,27 @@ Install Docker and boot2docker following the instructions on
 Not supported yet (we just haven't tried, give it a go, it might work). Pull
 requests very welcome.
 
+### Sister Projects
+
+There are many projects implementing something similar to this. These are
+listed below, by way of inheritance:
+
+* [wolrah/lancache][wolrah/lancache] - the initial public project based on Multiplay's initial work
+* [multiplay/lancache][multiplay/lancache] - Multiplay's project based off their newer public work
+  * [Lochnair/lancache][Lochnair/lancache]
+    * [zeropingheroes/lancache][zeropingheroes/lancache]
+* [frag-o-matic/lan-cache][frag-o-matic/lan-cache]
+  * [bntjah/lancache][bntjah/lancache]
+* [ti-mo/ansible-lanparty][ti-mo/ansible-lanparty]
+
 [docker]: https://docker.io  "Docker"
 [docker_install]: https://docs.docker.com/installation/  "Docker Installation"
 [docker-compose]: https://docs.docker.com/compose/
 [docker_osx_install]: https://docs.docker.com/installation/mac/  "Docker"
+[wolrah/lancache]: https://github.com/wolrah/lancache
+[multiplay/lancache]: https://github.com/multiplay/lancache
+[Lochnair/lancache]: https://github.com/Lochnair/lancache
+[zeropingheroes/lancache]: https://github.com/zeropingheroes/lancache
+[frag-o-matic/lan-cache]: https://gitlab.com/frag-o-matic/lan-cache
+[bntjah/lancache]: https://github.com/bntjah/lancache
+[ti-mo/ansible-lanparty]: https://github.com/ti-mo/ansible-lanparty

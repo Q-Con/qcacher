@@ -7,4 +7,4 @@ if [ -n ${DNS_IP+x} ]; then
         unbound-checkconf
 fi
 
-exec unbound
+exec $@

@@ -2,8 +2,8 @@ FROM alpine:3.7
 
 MAINTAINER Dan Porter <dpreid@gmail.com>
 
-ENV SNIPROXY_VERSION=0.5.0 \
-    SNIPROXY_SHASUM="0b8dd06f9aa9e1c4151b572caf645ffceacdd35a139ded16a7fb0035452c17e5"
+ENV SNIPROXY_VERSION=0.6.0 \
+    SNIPROXY_SHASUM="d73c77a9fa8199ae7ac551c0332d3e0a3ff234623f53d65369a8fa560d9880e2"
 
 RUN apk --no-cache --virtual build-dependencies add \
         libressl \

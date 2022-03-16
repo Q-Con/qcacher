@@ -1,9 +1,9 @@
-FROM alpine:3.7
+FROM alpine:3.15
 
 MAINTAINER Dan Porter <dpreid@gmail.com>
 
-ENV SNIPROXY_VERSION=0.6.0 \
-    SNIPROXY_SHASUM="d73c77a9fa8199ae7ac551c0332d3e0a3ff234623f53d65369a8fa560d9880e2"
+ENV SNIPROXY_VERSION="822bb80df9b7b345cc9eba55df74a07b498819ba" \
+    SNIPROXY_SHASUM="e8701d9a722155810b23c6363b3d8bf6e55734576c1d4c49e3d1542099c898eb"
 
 RUN apk --no-cache --virtual build-dependencies add \
         libressl \
@@ -16,7 +16,7 @@ RUN apk --no-cache --virtual build-dependencies add \
         udns-dev \
         bsd-compat-headers \
     && mkdir -p /tmp/build \
-    && wget -O /tmp/build/${SNIPROXY_VERSION}.tar.gz https://github.com/dlundquist/sniproxy/archive/${SNIPROXY_VERSION}.tar.gz \
+    && wget -O /tmp/build/${SNIPROXY_VERSION}.tar.gz https://codeload.github.com/dlundquist/sniproxy/tar.gz/${SNIPROXY_VERSION} \
     && echo "${SNIPROXY_SHASUM}  /tmp/build/${SNIPROXY_VERSION}.tar.gz" | sha256sum -c \
     && tar -xzf /tmp/build/${SNIPROXY_VERSION}.tar.gz -C /tmp/build/ \
     && cd /tmp/build/sniproxy-${SNIPROXY_VERSION} \

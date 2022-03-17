@@ -1,4 +1,4 @@
-FROM nginx:1.12-alpine
+FROM nginx:alpine
 MAINTAINER Dan Porter <dpreid@gmail.com>
 
 COPY config /etc/nginx

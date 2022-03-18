@@ -3,6 +3,8 @@ services:
     nginx:
         image: qcacher/nginx
         build: nginx
+        links:
+            - "unbound:qcacher-dns"
         volumes:
             - cache-data:/srv
         ports:
@@ -18,6 +20,8 @@ services:
     sniproxy:
         image: qcacher/sniproxy
         build: sniproxy
+        links:
+            - "unbound:qcacher-dns"
         ports:
             - 0.0.0.0:443:443
 volumes:

@@ -32,7 +32,9 @@ RUN apk --no-cache --virtual build-dependencies add \
     && apk --no-cache --purge del build-dependencies
 
 COPY sniproxy.conf /etc/sniproxy.conf
+COPY docker-entrypoint.sh /
 
 EXPOSE 443
 
+ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["sniproxy", "-f"]

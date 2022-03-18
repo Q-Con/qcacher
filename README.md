@@ -56,9 +56,13 @@ To get started with this application you will require [docker][docker] and
 [docker-compose][docker-compose]. If you don't have these tools installed
 please see the section of [installing them](#installing-docker).
 
-Further documentation and configurability is pending, but configure the
-`DNS_IP` in `docker-compose.yml` to that of your host, and have clients use
-the running machine as a DNS server.
+You should configure the following two environment variables in
+`docker-compose.yml` to provide the service:
+
+- `CACHE_IP` - the IPv4 address of the host running qcacher that clients can connect to
+- `CACHE_SUBNET` - the IPv4 subnet that qcacher should cache for (e.g. `192.168.0.0/16`)
+
+DNS for the affected clients should be provided by qcacher.
 
 Once you have Docker installed and the IP configured, it is a as simple as
 running `docker-compose up` in the root of the repository to start all the

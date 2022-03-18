@@ -1,10 +1,12 @@
 #!/bin/sh
 set -e
 
-if [ -n ${DNS_IP+x} ]; then
-    # Swap IPs defined in qcacher.conf with the one provided at runtime
-    sed -i -e's/\([0-9]\{1,3\}\.\)\{3\}[0-9]\{1,3\}/'"${DNS_IP}"'/' /etc/unbound/qcacher.conf && \
-        unbound-checkconf
+if [ -n ${CACHE_IP+x} ]; then
+    echo "local-data: \"qcacher IN A ${CACHE_IP}\"" >> /etc/unbound/settings.conf
+fi
+if [ -n ${CACHE_SUBNET+x} ]; then
+    echo "access-control-view: ${CACHE_SUBNET} qcacher" >> /etc/unbound/settings.conf
 fi
 
+unbound-checkconf
 exec $@

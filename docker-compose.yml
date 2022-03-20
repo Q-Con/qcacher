@@ -8,7 +8,9 @@ services:
         volumes:
             - cache-data:/srv
         ports:
-            - 0.0.0.0:80:80
+            - 0.0.0.0:80:80/tcp
+            - 0.0.0.0:443:443/tcp
+            - 0.0.0.0:443:443/udp
     unbound:
         image: qcacher/unbound
         build: unbound
@@ -17,13 +19,6 @@ services:
         environment:
             CACHE_IP: 192.168.86.183
             CACHE_SUBNET: 192.168.0.0/16
-    sniproxy:
-        image: qcacher/sniproxy
-        build: sniproxy
-        links:
-            - "unbound:qcacher-dns"
-        ports:
-            - 0.0.0.0:443:443
 volumes:
     cache-data:
         driver: local

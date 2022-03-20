@@ -3,6 +3,8 @@ services:
     nginx:
         image: qcacher/nginx
         build: nginx
+        links:
+            - "unbound:qcacher-dns"
         volumes:
             - cache-data:/srv
         ports:
@@ -13,10 +15,13 @@ services:
         ports:
             - 0.0.0.0:53:53/udp
         environment:
-            DNS_IP: 192.168.86.183
+            CACHE_IP: 192.168.86.183
+            CACHE_SUBNET: 192.168.0.0/16
     sniproxy:
         image: qcacher/sniproxy
         build: sniproxy
+        links:
+            - "unbound:qcacher-dns"
         ports:
             - 0.0.0.0:443:443
 volumes:

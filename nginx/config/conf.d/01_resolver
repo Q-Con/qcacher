@@ -1,3 +1,2 @@
-# Google and Level3's public DNS servers
-resolver 8.8.8.8 4.2.2.2 ipv6=off;
+resolver 127.0.0.11 ipv6=off;
 resolver_timeout 5s;

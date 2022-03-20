@@ -36,14 +36,13 @@ We currently support content caching and delivery for the following services:
 
 ## Components
 
-There are 3 components to this service:
+There are 2 components to this service:
 
 * **nginx** - a fast, lightweight, and efficient web server configured to
-  cache and store content from supported delivery networks
+  cache and store content from supported delivery networks, and passthrough
+  HTTPS connections to overridden domains to ensure continued delivery
 * **unbound** - a flexible and fast DNS server configured to override records
   of the services we support
-* **sniproxy** - proxies incoming HTTPS and TLS connections to overridden
-  domains to ensure successful connections to the upstream service
 
 
 ## Getting Started

@@ -3,8 +3,6 @@ services:
     nginx:
         image: qcacher/nginx
         build: nginx
-        links:
-            - "unbound:qcacher-dns"
         volumes:
             - cache-data:/srv
         ports:

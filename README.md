@@ -21,6 +21,7 @@ We currently support content caching and delivery for the following services:
 
 * PlayStation Network (PS3 & PS4)
 * Xbox Live (**untested**)
+* Epic Games (Store and Unreal Engine)
 * Nintendo (3DS & Wii U)
 * Blizzard (Starcraft 2, Hearthstone, etc.)
 * Riot (League of Legends)

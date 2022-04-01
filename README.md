@@ -19,7 +19,7 @@ and resiliency of caching when paired with slow, or intermittent connections.
 
 We currently support content caching and delivery for the following services:
 
-* PlayStation Network (PS3 & PS4)
+* PlayStation Network (PS3, PS4, PS5)
 * Xbox Live (**untested**)
 * Epic Games (Store and Unreal Engine)
 * Nintendo (3DS & Wii U)

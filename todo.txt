@@ -1,0 +1,30 @@
+# Steam
+
+*.steam-content-dnld-1.apac-1-cdn.cqloud.com
+*.steam-content-dnld-1.eu-c1-cdn.cqloud.com
+*.steam-content-dnld-1.qwilted-cds.cqloud.com
+cdn.mileweb.cs.steampowered.com.8686c.com
+cdn1-sea1.valve.net
+cdn2-sea1.valve.net
+edge.steam-dns-2.top.comcast.net
+edge.steam-dns.top.comcast.net
+st.dl.bscstorage.net
+steam.apac.qtlglb.com
+steam.cdn.on.net
+steam.eca.qtlglb.com
+steam.ix.asn.au
+steam.naeu.qtlglb.com
+steamcdn-a.akamaihd.net  # Profile images
+steampipe-kr.akamaized.net
+update1.csgo.wmsj.cn
+update1.dota2.wmsj.cn
+update2.csgo.wmsj.cn
+update2.dota2.wmsj.cn
+update3.csgo.wmsj.cn
+update3.dota2.wmsj.cn
+update4.csgo.wmsj.cn
+update4.dota2.wmsj.cn
+update5.csgo.wmsj.cn
+update5.dota2.wmsj.cn
+update6.csgo.wmsj.cn
+update6.dota2.wmsj.cn

@@ -24,7 +24,7 @@ We currently support content caching and delivery for the following services:
 * Epic Games (Store and Unreal Engine)
 * Nintendo (3DS & Wii U)
 * Blizzard (Starcraft 2, Hearthstone, etc.)
-* Riot (League of Legends)
+* Riot (League of Legends, Valorant, etc.)
 * Steam (Broadcasts, Games, etc.)
 * Origin (EA)
 * Hi-Rez (Smite, etc.)
